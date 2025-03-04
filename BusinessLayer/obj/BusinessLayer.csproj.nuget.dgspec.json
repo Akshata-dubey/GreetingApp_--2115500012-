@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\HelloGreetingApplication\\BusinessLayer\\BusinessLayer.csproj": {}
+    "E:\\GreetingApplication\\GreetingApp_--2115500012-\\BusinessLayer\\BusinessLayer.csproj": {}
   },
   "projects": {
-    "E:\\HelloGreetingApplication\\BusinessLayer\\BusinessLayer.csproj": {
+    "E:\\GreetingApplication\\GreetingApp_--2115500012-\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HelloGreetingApplication\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "E:\\HelloGreetingApplication\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\HelloGreetingApplication\\BusinessLayer\\obj\\",
+        "projectPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\KUSUM\\.nuget\\packages\\",
+        "outputPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\KUSUM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj": {
-                "projectPath": "E:\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj"
+              "E:\\GreetingApplication\\GreetingApp_--2115500012-\\RepositoryLayer\\RepositoryLayer.csproj": {
+                "projectPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\RepositoryLayer\\RepositoryLayer.csproj"
               }
             }
           }
@@ -54,6 +53,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -70,24 +79,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj": {
+    "E:\\GreetingApplication\\GreetingApp_--2115500012-\\ModelLayer\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj",
+        "projectUniqueName": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\ModelLayer\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "E:\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\HelloGreetingApplication\\ModelLayer\\obj\\",
+        "projectPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\ModelLayer\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\KUSUM\\.nuget\\packages\\",
+        "outputPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\ModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\KUSUM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -96,7 +105,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -136,24 +144,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "E:\\GreetingApplication\\GreetingApp_--2115500012-\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "E:\\HelloGreetingApplication\\RepositoryLayer\\RepositoryLayer.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\HelloGreetingApplication\\RepositoryLayer\\obj\\",
+        "projectPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\RepositoryLayer\\RepositoryLayer.csproj",
+        "packagesPath": "C:\\Users\\KUSUM\\.nuget\\packages\\",
+        "outputPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\KUSUM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -162,15 +170,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj": {
-                "projectPath": "E:\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj"
+              "E:\\GreetingApplication\\GreetingApp_--2115500012-\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "E:\\GreetingApplication\\GreetingApp_--2115500012-\\ModelLayer\\ModelLayer.csproj"
               }
             }
           }
@@ -206,7 +213,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
