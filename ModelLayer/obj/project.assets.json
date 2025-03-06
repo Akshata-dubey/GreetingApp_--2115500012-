@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\": {},
+    "C:\\Users\\yatha\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj",
+      "projectUniqueName": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj",
       "projectName": "ModelLayer",
-      "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj",
-      "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-      "outputPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\obj\\",
+      "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj",
+      "packagesPath": "C:\\Users\\yatha\\.nuget\\packages\\",
+      "outputPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yatha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -1,191 +1,167 @@
-using System.Reflection.Metadata.Ecma335;
 using BusinessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
-using NLog;
+using RepositoryLayer.Entity;
 
 namespace HelloGreetingApplication.Controllers
 {
-
     /// <summary>
-    /// Class providing API for HelloGreeting
+    /// Class Providing API for HelloGreeting
     /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class HelloGreetingController : ControllerBase
     {
+        private static Dictionary<string, string> greetings = new Dictionary<string, string>();
+        private readonly IGreetingService _greetingService;
 
-        private readonly IGreetingBL _greetingBL;
-        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-
-
-        public HelloGreetingController(IGreetingBL greetingBL)
+        public HelloGreetingController(IGreetingService greetingService)
         {
-            _greetingBL = greetingBL;
-
+            _greetingService = greetingService;
         }
-        
-
-
-
-        private static Dictionary<string, string> keyValueStore = new Dictionary<string, string>();
 
         /// <summary>
-        /// Get method to get the Greeting message
+        /// Get Method to get the Greeting Message
         /// </summary>
-        /// <returns>"Hello, World!"</returns>
+        /// <returns>Hello, World</returns>
         [HttpGet]
         public IActionResult Get() 
         {
+            ResponseBody<Dictionary<string, string>> ResponseModel = new ResponseBody<Dictionary<string, string>>();
 
-            ResponseModel<string> responseModel = new ResponseModel<string>();
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Hello to Greeting App API Endpoint";
+            ResponseModel.Data = greetings;
 
-            responseModel.Message = "Hello to Greeting App API endpoint Hit";
-            responseModel.Success = true;
-            responseModel.Data = "Hello World!";
-
-            return Ok(responseModel);
-
+            return Ok(ResponseModel);
         }
-        /// <summary>
-        /// Add method to add the new key value 
-        /// </summary>
-        /// <param name="requestModel"></param>
-        /// <returns>response model</returns>
 
         [HttpPost]
-        public IActionResult Post(RequestModel requestModel)
+        public IActionResult Post([FromBody] RequestBody requestModel)
         {
-            ResponseModel<string> responseModel = new ResponseModel<string>();
+            ResponseBody<string> ResponseModel = new ResponseBody<string>();
 
-            // Store the key-value pair in keyValueStore
-            keyValueStore[requestModel.key] = requestModel.value;
+            greetings[requestModel.Key] = requestModel.Value;
 
-            responseModel.Success = true;
-            responseModel.Message = "Request received successfully and stored";
-            responseModel.Data = $"Key: {requestModel.key}, Value: {requestModel.value}";
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Request received successfully";
+            ResponseModel.Data = $"Key: {requestModel.Key}, Value: {requestModel.Value}";
 
-            return Ok(responseModel);
+            return Ok(ResponseModel);
         }
 
-
-        /// <summary>
-        /// Update an existing Key value pair
-        /// </summary>
-        /// <param name="requestModel"></param>
         [HttpPut]
-        public IActionResult Put(RequestModel requestModel)
+        public IActionResult Put([FromBody] RequestBody requestModel)
         {
-            if (keyValueStore.ContainsKey(requestModel.key))
-            {
-                keyValueStore[requestModel.key] = requestModel.value;
+            ResponseBody<Dictionary<string, string>> ResponseModel = new ResponseBody<Dictionary<string, string>>();
 
-                return Ok(new ResponseModel<string>
-                {
-                    Success = true,
-                    Message = "Updated Successfully",
-                    Data = $"Key: {requestModel.key}, New Value: {requestModel.value}"
-                });
-            }
+            // Add or update the dictionary
+            greetings[requestModel.Key] = requestModel.Value;
 
-            return NotFound(new ResponseModel<string>
-            {
-                Success = false,
-                Message = "Key not found"
-            });
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Greeting updated successfully";
+            ResponseModel.Data = greetings;
+
+            return Ok(ResponseModel);
         }
-
-        /// <summary>
-        /// Partially update an existing key-value pair
-        /// </summary>
-        /// <param name="requestModel"></param>
-        /// <returns>reponse model</returns>
 
         [HttpPatch]
-        public IActionResult Patch(RequestModel requestModel)
+        public IActionResult Patch(RequestBody requestModel)
         {
-            if (keyValueStore.ContainsKey(requestModel.key))
-            {
-                keyValueStore[requestModel.key] = requestModel.value;
+            ResponseBody<string> ResponseModel = new ResponseBody<string>();
 
-                return Ok(new ResponseModel<string>
-                {
-                    Success = true,
-                    Message = "Updated Successfully",
-                    Data = $"Key: {requestModel.key}, New Value: {requestModel.value}"
-                });
+            if (!greetings.ContainsKey(requestModel.Key))
+            {
+                ResponseModel.Success = false;
+                ResponseModel.Message = "Key not found";
+                return NotFound(ResponseModel);
             }
 
-            return NotFound(new ResponseModel<string>
-            {
-                Success = false,
-                Message = "Key not found"
-            });
+            greetings[requestModel.Key] = requestModel.Value;
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Value partially updated successfully";
+            ResponseModel.Data = $"Key: {requestModel.Key}, Updated Value: {requestModel.Value}";
+
+            return Ok(ResponseModel);
         }
-        /// <summary>
-        /// Delete the value by id 
-        /// </summary>
-        /// <param name="key"></param>
-        /// <returns></returns>
 
         [HttpDelete("{key}")]
-        public IActionResult Delete(string key) 
+        public IActionResult Delete(string key)
         {
-            if (keyValueStore.ContainsKey(key))
+            ResponseBody<string> ResponseModel = new ResponseBody<string>();
 
-            { keyValueStore.Remove(key);
-                return Ok(new ResponseModel<string>
-                {
-                    Success = true,
-                    Message = "Deleted successfully"
-                });
-
+            if (!greetings.ContainsKey(key))
+            {
+                ResponseModel.Success = false;
+                ResponseModel.Message = "Key not found";
+                return NotFound(ResponseModel);
             }
-            return NotFound(new ResponseModel<string>
-            {
-                Success = false,
-                Message = "Key not found"
-            });
+
+            greetings.Remove(key);
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Entry deleted successfully";
+
+            return Ok(ResponseModel);
+        }
+
+        [HttpGet]
+        [Route("greeting")]
+        public IActionResult Greetings([FromQuery] string? firstName, [FromQuery] string? lastName) 
+        {
+            ResponseBody<string> ResponseModel = new ResponseBody<string>();
+
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Greeting message fetched successfully";
+            ResponseModel.Data = _greetingService.GetGreetingMessage(firstName, lastName);
+
+            return Ok(ResponseModel);
         }
 
         /// <summary>
-        /// Get method for greeting from service
+        /// Save Greeting Message
         /// </summary>
-        /// <returns></returns>
-        [HttpGet("GreetingMessage")]
-        public IActionResult GetGreetingMessage()
+        [HttpPost]
+        [Route("save-greeting")]
+        public IActionResult SaveGreeting([FromBody] GreetingEntity greeting)
         {
-            string result = _greetingBL.GetGreetingMessage();
-            var response = new ResponseModel<string>
+            ResponseBody<string> ResponseModel = new ResponseBody<string>();
+
+            try
             {
-                Success = true,
-                Message = $"GOt greeting message form business layer{result}",
-                Data= result
-            };
-            return Ok(response);
+                _greetingService.SaveGreetingMessage(greeting);
+                ResponseModel.Success = true;
+                ResponseModel.Message = "Greeting saved successfully";
+                ResponseModel.Data = $"Greeting for {greeting.FirstName} {greeting.LastName} saved.";
+            }
+            catch (Exception ex)
+            {
+                ResponseModel.Success = false;
+                ResponseModel.Message = $"Error saving greeting: {ex.Message}
+            }
+
+            return Ok(ResponseModel);
         }
 
-        /// <summary>
-        /// Get method for greeting from service with optional user details
-        /// </summary>
-        /// <param name="firstName"></param>
-        /// <param name="lastName"></param>
-        /// <returns></returns>
 
-        [HttpGet("GreetingMessageUser")]
-        
-        public IActionResult GetGreetingMessageUser(string? firstName = null,string? lastName =null)
+        [HttpGet]
+        [Route("get-greetings")]
+        public IActionResult GetGreetings()
         {
-            string result = _greetingBL.GetGreetingMessageUser(firstName,lastName);
-            var response = new ResponseModel<string>
-            {
-                Success = true,
-                Message = $"Got greetings msg generated successfully",
-                Data = result
-            };
-            return Ok(response);
+            ResponseBody<List<GreetingEntity>> ResponseModel = new ResponseBody<List<GreetingEntity>>();
 
+           try
+            {
+                ResponseModel.Success = true;
+                ResponseModel.Message = "Greetings fetched successfully";
+                ResponseModel.Data = _greetingService.GetSavedGreetings();
+            }
+            catch (Exception ex)
+            {
+                ResponseModel.Success = false;
+                ResponseModel.Message = $"Error fetching greetings: {ex.Message}";
+            }
+
+            return Ok(ResponseModel);
         }
-        
     }
 }

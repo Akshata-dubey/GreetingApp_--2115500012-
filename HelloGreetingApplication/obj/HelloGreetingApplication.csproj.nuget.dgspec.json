@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GreetingCLone\\GreetingApp_-2115500120-\\HelloGreetingApplication\\HelloGreetingApplication.csproj": {}
+    "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\HelloGreetingApplication\\HelloGreetingApplication.csproj": {}
   },
   "projects": {
-    "E:\\GreetingCLone\\GreetingApp_-2115500120-\\BusinessLayer\\BusinessLayer.csproj": {
+    "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\BusinessLayer\\obj\\",
+        "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\yatha\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yatha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,15 +26,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\GreetingCLone\\GreetingApp_-2115500120-\\RepositoryLayer\\RepositoryLayer.csproj": {
-                "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\RepositoryLayer\\RepositoryLayer.csproj"
+              "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj"
+              },
+              "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj": {
+                "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj"
               }
             }
           }
@@ -55,13 +57,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "NLog": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.4.0, )"
-            },
-            "NLog.Web.AspNetCore": {
-              "target": "Package",
-              "version": "[5.4.0, )"
+              "version": "[6.0.36, )"
             }
           },
           "imports": [
@@ -84,20 +84,20 @@
         }
       }
     },
-    "E:\\GreetingCLone\\GreetingApp_-2115500120-\\HelloGreetingApplication\\HelloGreetingApplication.csproj": {
+    "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\HelloGreetingApplication\\HelloGreetingApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
+        "projectUniqueName": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
         "projectName": "HelloGreetingApplication",
-        "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\HelloGreetingApplication\\obj\\",
+        "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
+        "packagesPath": "C:\\Users\\yatha\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\HelloGreetingApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yatha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -106,15 +106,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\GreetingCLone\\GreetingApp_-2115500120-\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\BusinessLayer\\BusinessLayer.csproj"
+              "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\BusinessLayer\\BusinessLayer.csproj"
+              },
+              "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj": {
+                "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj"
               }
             }
           }
@@ -135,6 +137,12 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
             "NLog": {
               "target": "Package",
               "version": "[5.4.0, )"
@@ -175,20 +183,20 @@
         }
       }
     },
-    "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj": {
+    "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj",
+        "projectUniqueName": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj",
         "projectName": "ModelLayer",
-        "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\obj\\",
+        "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\ModelLayer.csproj",
+        "packagesPath": "C:\\Users\\yatha\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\ModelLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yatha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -197,7 +205,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -241,20 +248,20 @@
         }
       }
     },
-    "E:\\GreetingCLone\\GreetingApp_-2115500120-\\RepositoryLayer\\RepositoryLayer.csproj": {
+    "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\RepositoryLayer\\RepositoryLayer.csproj",
+        "projectUniqueName": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj",
         "projectName": "RepositoryLayer",
-        "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\RepositoryLayer\\RepositoryLayer.csproj",
-        "packagesPath": "C:\\Users\\Rishabh kushwah\\.nuget\\packages\\",
-        "outputPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\RepositoryLayer\\obj\\",
+        "projectPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\RepositoryLayer.csproj",
+        "packagesPath": "C:\\Users\\yatha\\.nuget\\packages\\",
+        "outputPath": "D:\\Visual Studio\\Greeting-App-VC\\Greeting-App_-2115001168-\\RepositoryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Rishabh kushwah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yatha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -263,17 +270,12 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj": {
-                "projectPath": "E:\\GreetingCLone\\GreetingApp_-2115500120-\\ModelLayer\\ModelLayer.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -291,6 +293,26 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.36, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

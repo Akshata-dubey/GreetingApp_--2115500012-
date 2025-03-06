@@ -19,7 +19,7 @@
     "Parameters": [
       {
         "Name": "requestModel",
-        "Type": "ModelLayer.Model.RequestModel",
+        "Type": "ModelLayer.Model.RequestBody",
         "IsRequired": true
       }
     ],
@@ -35,7 +35,7 @@
     "Parameters": [
       {
         "Name": "requestModel",
-        "Type": "ModelLayer.Model.RequestModel",
+        "Type": "ModelLayer.Model.RequestBody",
         "IsRequired": true
       }
     ],
@@ -51,7 +51,7 @@
     "Parameters": [
       {
         "Name": "requestModel",
-        "Type": "ModelLayer.Model.RequestModel",
+        "Type": "ModelLayer.Model.RequestBody",
         "IsRequired": true
       }
     ],
@@ -75,8 +75,8 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "GetGreetingMessage",
-    "RelativePath": "HelloGreeting/GreetingMessage",
+    "Method": "GetGreetings",
+    "RelativePath": "HelloGreeting/get-greetings",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -85,8 +85,8 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "GetGreetingMessageUser",
-    "RelativePath": "HelloGreeting/GreetingMessageUser",
+    "Method": "Greetings",
+    "RelativePath": "HelloGreeting/greeting",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -100,6 +100,22 @@
         "Name": "lastName",
         "Type": "System.String",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "SaveGreeting",
+    "RelativePath": "HelloGreeting/save-greeting",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "greeting",
+        "Type": "RepositoryLayer.Entity.GreetingEntity",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
